@@ -1,0 +1,21 @@
+.navbar {
+	display: flex;
+	align-items: center;
+	padding: 0 2rem;
+	color: var(--red);
+	font-weight: 700;
+	gap: 2rem;
+	margin: 20px 10px;
+}
+
+.navbar-logo {
+	margin-right: auto;
+	margin-left: 14px;
+}
+
+.list {
+	display: flex;
+	gap: 2rem;
+	margin-right: 20px;
+}
+

@@ -1,0 +1,14 @@
+.footer {
+	background-color: black;
+	color: white;
+	padding:20px;
+	text-align: center;
+	min-height: 200px;
+	display: grid;
+	align-items: center;
+}
+
+.footer__text {
+	margin-top: -70px;
+}
+
