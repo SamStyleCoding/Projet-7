@@ -1,0 +1,17 @@
+@use "../../scss/variables.scss" as *;
+
+
+.footer {
+	background-color: $footer-bg;
+	color: $grid-bg-light;
+	padding:20px;
+	text-align: center;
+	min-height: 200px;
+	display: grid;
+	align-items: center;
+		&__text {
+			margin-top: -70px;
+		}
+}
+
+

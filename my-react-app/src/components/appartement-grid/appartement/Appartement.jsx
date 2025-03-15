@@ -1,10 +1,11 @@
 import React from 'react'
-import '../appartement/Appartement.css'
+import { NavLink } from "react-router-dom"
+import '../appartement/Appartement.scss'
 
 export default function Appartement() {
   return (
 	<div className='apartment'>
-	  <p className='apartment__subtitle'>Titre de la location</p>
+	  <NavLink to="/flat" className='apartment__subtitle'>Titre de la location</NavLink>
 	</div>
   )
 }

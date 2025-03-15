@@ -1,15 +1,17 @@
 import React from 'react'
-import './Navbar.css'
+import { NavLink } from "react-router-dom"
+import './Navbar.scss'
 
 export default function Navbar() {
   return (
 	<nav className="navbar">
-		<div className="navbar-logo">
-			<img src="Logo.png" alt="Logo" width="130px" />
-		</div>
+		<NavLink to="/" className="navbar-logo">
+
+				<img src="Logo.png" alt="Logo" width="130px" />
+		</NavLink>
 		<div className='list'>
-			<div>Accueil</div>
-			<div>A propos</div>
+			<NavLink to="/">Accueil</NavLink>
+			<NavLink to="/about">A propos</NavLink>
 		</div>
 	</nav>
   )
