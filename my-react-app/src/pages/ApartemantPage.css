@@ -1,0 +1,7 @@
+.apartement-page {
+  color: #ff6060;
+}
+.apartement-page .apartement__description__area {
+  display: flex;
+  gap: 1rem;
+}/*# sourceMappingURL=ApartemantPage.css.map */

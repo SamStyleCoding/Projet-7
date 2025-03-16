@@ -1,0 +1,28 @@
+.appartement-page__description {
+  display: flex;
+  flex-direction: column;
+  gap: 0 1rem;
+}
+.appartement-page__description p {
+  margin-block: 0;
+}
+.appartement-page__description .description__header {
+  background-color: #ff6060;
+  color: white;
+  padding: 0.2em 1em;
+  border-radius: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.appartement-page__description .description__header i {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.appartement-page__description .description__content {
+  background-color: #f6f6f6;
+  color: #ff6060;
+  padding: 2rem;
+  border-radius: 0.7rem;
+  z-index: -1;
+}/*# sourceMappingURL=ApartementDescription.css.map */

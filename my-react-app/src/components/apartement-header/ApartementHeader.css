@@ -1,0 +1,62 @@
+.apartement-page__header {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.apartement-page__header .apartement-title {
+  flex-grow: 1;
+}
+.apartement-page__header .apartement-tags {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 116px));
+  gap: 1rem;
+  margin-top: 15px;
+}
+.apartement-page__header .apartement-tags span {
+  background-color: #ff6060;
+  color: white;
+  padding: 0.3em 0.5em;
+  border-radius: 0.7rem;
+  text-align: center;
+  font-weight: 300;
+  font-size: 13px;
+}
+.apartement-page__header h1 {
+  font-weight: 400px;
+  margin-block: 0;
+}
+.apartement-page__header h2 {
+  font-weight: 400px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+  font-size: 20px;
+}
+.apartement-page__header h3 {
+  margin-block: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  font-weight: 400px;
+}
+.apartement-page__header .appartement-page__owner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.apartement-page__header .appartement-page__owner .apartement-details {
+  display: flex;
+  gap: 0.5rem;
+}
+.apartement-page__header .appartement-page__owner .apartement-details .appartement-badge {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.119);
+}
+.apartement-page__header .appartement-page__owner .appartement-stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 2rem;
+  margin-top: 4px;
+}/*# sourceMappingURL=ApartementHeader.css.map */
