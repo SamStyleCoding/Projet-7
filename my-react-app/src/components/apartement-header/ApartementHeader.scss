@@ -3,6 +3,9 @@
 .apartement-page__header {
 	display: flex;
 	margin-bottom: 2rem;
+		@media screen and (width <= 768px){
+			flex-direction: column;
+		}
 		.apartement-title {
 			flex-grow: 1;
 		}
@@ -42,9 +45,18 @@
 			display: flex;
 			flex-direction: column;
 			gap: 20px;
+				@media screen and (width <= 768px){
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					margin-block: 2rem;
+				}
 				.apartement-details {
 					display: flex;
 					gap: 0.5rem;
+					@media screen and (width <= 768px){
+						order: 1;
+					}
 						.appartement-badge {
 							height: 50px;
 							width: 50px;

@@ -1,8 +1,8 @@
 import React from 'react';
 import './ApartemantPage.scss';
-import { ApartementDescription } from '../components/Apartement-description/ApartementDescription';
-import { ApartementBanner } from '../components/apartement-banner/ApartementBanner'
-import { ApartementHeader } from '../components/apartement-header/ApartementHeader';
+import { ApartementDescription } from '../../components/Apartement-description/ApartementDescription';
+import { ApartementBanner } from '../../components/apartement-banner/ApartementBanner'
+import { ApartementHeader } from '../../components/apartement-header/ApartementHeader';
 
 
 export default function ApartemantPage() {

@@ -7,6 +7,12 @@
   gap: 2rem;
   margin: 20px 10px;
 }
+@media screen and (width <= 768px) {
+  .navbar {
+    text-transform: uppercase;
+    font-weight: 400px;
+  }
+}
 .navbar a {
   text-decoration: none;
   color: #ff6060;

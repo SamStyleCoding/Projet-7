@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 0 1rem;
+  margin-bottom: 1rem;
 }
 .appartement-page__description p {
   margin-block: 0;

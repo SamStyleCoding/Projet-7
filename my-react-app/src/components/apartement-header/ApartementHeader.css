@@ -2,6 +2,11 @@
   display: flex;
   margin-bottom: 2rem;
 }
+@media screen and (width <= 768px) {
+  .apartement-page__header {
+    flex-direction: column;
+  }
+}
 .apartement-page__header .apartement-title {
   flex-grow: 1;
 }
@@ -42,9 +47,22 @@
   flex-direction: column;
   gap: 20px;
 }
+@media screen and (width <= 768px) {
+  .apartement-page__header .appartement-page__owner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-block: 2rem;
+  }
+}
 .apartement-page__header .appartement-page__owner .apartement-details {
   display: flex;
   gap: 0.5rem;
+}
+@media screen and (width <= 768px) {
+  .apartement-page__header .appartement-page__owner .apartement-details {
+    order: 1;
+  }
 }
 .apartement-page__header .appartement-page__owner .apartement-details .appartement-badge {
   height: 50px;

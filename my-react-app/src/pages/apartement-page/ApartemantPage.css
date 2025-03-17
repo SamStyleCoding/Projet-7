@@ -4,4 +4,10 @@
 .apartement-page .apartement__description__area {
   display: flex;
   gap: 1rem;
+}
+@media screen and (width <= 768px) {
+  .apartement-page .apartement__description__area {
+    display: flex;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=ApartemantPage.css.map */
