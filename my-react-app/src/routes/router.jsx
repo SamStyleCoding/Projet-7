@@ -6,13 +6,14 @@ import Footer from '../components/footer/Footer';
 import Main from '../components/main/Main';
 import ApartemantPage from '../pages/apartement-page/ApartemantPage';
 import About from '../pages/about/About';
+import ErrorPageNotFound from '../pages/error/ErrorPageNotFound';
 
 
 export const router = createBrowserRouter ([
 	{
 	  path: "/",
 	  element: <App />,
-	  errorElement: <h1>404 NotFound</h1>
+	  errorElement: <ErrorPageNotFound />
 	},
 	{
 	  path: "/flat",
