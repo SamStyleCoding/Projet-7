@@ -16,7 +16,7 @@ export const router = createBrowserRouter ([
 	  errorElement: <ErrorPageNotFound />
 	},
 	{
-	  path: "/flat",
+	  path: "/flat/:id",
 	  element: (
 		<>
 			<Navbar />

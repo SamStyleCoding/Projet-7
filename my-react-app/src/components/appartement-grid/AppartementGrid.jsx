@@ -12,7 +12,7 @@ export default function AppartementGrid() {
 	useEffect(fetchApartement, []);
 
 	function fetchApartement() {
-		fetch('db.json')
+		fetch('/db.json')
 			.then((res) => res.json())
 			.then((res) => setApartements(res))
 			.catch(console.error)
@@ -21,7 +21,7 @@ export default function AppartementGrid() {
   return (
 	<div className='grid' >
 		{apartements.map((apt) => (
-			<Appartement title={apt.title} imageUrl={apt.cover} />
+			<Appartement key={apt.id} title={apt.title} imageUrl={apt.cover} id={apt.id} />
 		))}
 	</div>
   )

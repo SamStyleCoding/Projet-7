@@ -44,7 +44,7 @@
 		.appartement-page__owner {
 			display: flex;
 			flex-direction: column;
-			gap: 20px;
+			justify-content: space-between;
 				@media screen and (width <= 768px){
 					display: flex;
 					flex-direction: row;
@@ -57,7 +57,7 @@
 					@media screen and (width <= 768px){
 						order: 1;
 					}
-						.appartement-badge {
+						.appartement-badge img {
 							height: 50px;
 							width: 50px;
 							border-radius: 50px;
@@ -71,6 +71,10 @@
 					gap: 0.2rem;
 					font-size: 2rem;
 					margin-top: 4px;
+					color: $grid-bg-dark;
+						.on {
+							color: $color-primary;
+						}
 				}
 		}
 }

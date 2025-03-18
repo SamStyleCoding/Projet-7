@@ -1,32 +1,36 @@
 import React from 'react'
 import './ApartementHeader.scss'
 
-export function ApartementHeader() {
+export function ApartementHeader({data}) {
+
+	const { name } = data.host;
+	const [firstName, lastName] = name.split(" ");
+
   return (
 	  <div className='apartement-page__header'>
 			<div className='apartement-title'>
-				<h1>Crazy loft on Canal Martin</h1>
-				<h2>Paris, îls-de-france</h2>
+				<h1>{data.title}</h1>
+				<h2>{data.location}</h2>
 				<div className='apartement-tags'>
-					<span>Cozy</span>
-					<span>Canak</span>
-					<span>Paris 10</span>
+					{data.tags.map((tag) => (
+						<span key={tag}>{tag}</span>
+					))}
 				</div>
 			</div>
 			<div className='appartement-page__owner'>
 				<div className='apartement-details'>
 					<h3>
-						<span>Alexandre</span>
-						<span>Dumas</span>
+						<span>{firstName}</span>
+						<span>{lastName}</span>
 					</h3>
-					<div className='appartement-badge'></div>
+					<div className='appartement-badge'>
+						<img src={data.host.picture} />
+					</div>
 				</div>
 				<div className='appartement-stars'>
-					<span>★</span>
-					<span>★</span>
-					<span>★</span>
-					<span>☆</span>
-					<span>☆</span>
+					{[1, 2, 3, 4, 5].map((num) => (
+						<span key={num} className={data.rating >= num  ? "on" : ""}>★</span>
+					))}
 				</div>
 			</div>
 		</div>
