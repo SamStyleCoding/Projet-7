@@ -1,29 +1,61 @@
 @use '../../scss/variables.scss' as *;
 
-.appartement-page__description {
-	margin-bottom: 1rem;
-	flex-basis: 50%;
-		p {
-			margin-block: 0;
+@keyframes slide-in {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 500px; 
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    max-height: 500px;
+    opacity: 1;
+  }
+  to {
+    max-height: 0;
+    opacity: 0;
+  }
+}
+
+.appartement-pagedescription {
+  margin-bottom: 1rem;
+  flex-basis: 50%;
+
+  .descriptionheader {
+    background-color: $color-primary;
+    color: $grid-bg-light;
+    padding: 0.5em 1em;
+    border-radius: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .description__content {
+    background-color: $background-light;
+    color: $color-primary;
+    border-radius: 0.7rem;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: ease-in-out;
+
+		&.slide-in {
+		animation: slide-in 0.5s forwards;
 		}
-		.description__header{
-				background-color: $color-primary;
-				color: $grid-bg-light;
-				padding: 0.2em 1em;
-				border-radius: 0.7rem;
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-					i {
-						font-size: 1.2rem;
-						cursor: pointer;
-					}
-			}
-		.description__content{
-			background-color: $background-light;
-			color: $color-primary;
-			padding: 2rem;
-			border-radius: 0.7rem;
-			z-index: -1;
+
+		&.slide-out {
+		animation: slide-out 0.3s forwards;
 		}
+
+    .description__inner {
+      padding: 2rem;
+    }
+  }
 }

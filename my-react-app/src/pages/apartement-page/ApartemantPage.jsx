@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './ApartemantPage.scss';
+import './ApartemantPage.scss';                                         
 import { ApartementDescription } from '../../components/Apartement-description/ApartementDescription';
 import { ApartementBanner } from '../../components/apartement-banner/ApartementBanner'
 import { ApartementHeader } from '../../components/apartement-header/ApartementHeader';
@@ -32,7 +32,7 @@ export default function ApartemantPage() {
 
   return (
 	<div className='apartement-page'>
-		<ApartementBanner imageUrl={selectFlat.cover} />
+		<ApartementBanner imageArrey={selectFlat.pictures} />
 		<ApartementHeader data={selectFlat} />
 		<div className='apartement__description__area'>
 			<ApartementDescription title="Description" content={selectFlat.description} />

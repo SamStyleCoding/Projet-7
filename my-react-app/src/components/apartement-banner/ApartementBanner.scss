@@ -1,11 +1,44 @@
+@use "../../scss/variables.scss" as *;
+
 .apartement-banner{
 	margin-bottom: 2rem;
-	img {
-		width: 100%;
+	position: relative;
+		.btn{
+			position: absolute;
+			cursor: pointer;
+			top: 0;
+			bottom: 0;
+			width: 5rem;
+			background-color: transparent;
+			color: $background-light;
+			font-size: 2rem;
+			border: none;
+			right: 0;
+		}
+
+		.btn-previous {
+left: 0;
+		}
+
+	.image-container{
 		height: 20rem;
-		object-fit: cover;
-		border-radius: 1rem;
-		box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
-		margin-bottom: 1rem;
+		width: 100%;
+		position: relative;
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			inset: 0;
+			object-fit: cover;
+			border-radius: 1rem;
+			box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+			margin-bottom: 1rem;
+			opacity: 0;
+			transition: opacity 0.5s ease-in-out;
+				&.show {
+					opacity: 1;
+				}
+		}
 	}
+
 }

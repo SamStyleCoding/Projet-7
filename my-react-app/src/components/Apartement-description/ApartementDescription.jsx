@@ -1,16 +1,24 @@
-import React from 'react'
-import './ApartementDescription.scss'
+import React, { useState } from 'react';
+import './ApartementDescription.scss';
 
 export function ApartementDescription(props) {
-	return (
-		<div className="appartement-page__description">
-			<p className='description__header'>
-				<span>{props.title}</span>
-				<i className="fa-solid fa-chevron-up"></i>
-			</p>
-			<p className='description__content'>
-				{props.content}
-			</p>
-		</div>
-	)
+  const [isContentVisible, setIsContentVisible] = useState(false);
+
+  const showContent = () => {
+    setIsContentVisible(!isContentVisible);
+  };
+
+  return (
+    <div className="appartement-pagedescription">
+      <div className="descriptionheader" onClick={showContent}>
+        <span>{props.title}</span>
+        <i className={`fa-solid ${isContentVisible ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+      </div>
+      <div className={`description__content ${isContentVisible ? 'slide-in' : 'slide-out'}`}>
+        <div className="description__inner">
+          {props.content}
+        </div>
+      </div>
+    </div>
+  );
 }
