@@ -39,7 +39,7 @@ export function ApartementBanner(props) {
 
 	const getCarouselOrDefaultImage = () => {
 		if(!pictures || pictures.length === 0) {
-			return <img src='https://picsum.photos/1080' className='show' alt=''></img>
+			return <img src='/Cover.jpg' className='show' alt=''></img>
 		}
 		return pictures.map((pic, i) => (
 					<img key={pic} src={pic} alt='' className={getClassName(i)}></img>
@@ -53,10 +53,13 @@ export function ApartementBanner(props) {
 				{ arePicturesAvailable() && (
 					<>
 						<button className='btn btn-previous' onClick={moveToPrevious}>
-							<i class="fa-solid fa-chevron-left"></i>
+							<i className="fa-solid fa-chevron-left"></i>
 						</button>
+						<span className='currentPic'>
+							{currentPic + 1} / {pictures.length}
+						</span>
 						<button className='btn btn-next' onClick={moveToNext}>
-							<i class="fa-solid fa-chevron-right"></i>
+							<i className="fa-solid fa-chevron-right"></i>
 						</button>
 					</>
 				)}
