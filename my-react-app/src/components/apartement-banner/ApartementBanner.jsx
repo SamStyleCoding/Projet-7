@@ -34,11 +34,13 @@ export function ApartementBanner(props) {
 	};
 
 	const arePicturesAvailable = () => {
-		return pictures && pictures.length > 0;
+		if(pictures){
+			return pictures.length > 1;
+		}
 	};
 
 	const getCarouselOrDefaultImage = () => {
-		if(!pictures || pictures.length === 0) {
+		if(!pictures) {
 			return <img src='/Cover.jpg' className='show' alt=''></img>
 		}
 		return pictures.map((pic, i) => (
@@ -48,22 +50,22 @@ export function ApartementBanner(props) {
 
 
   return (
-	    <div className='apartement-banner'>
-			<div className='image-container'>{getCarouselOrDefaultImage()}</div>
-				{ arePicturesAvailable() && (
-					<>
-						<button className='btn btn-previous' onClick={moveToPrevious}>
-							<i className="fa-solid fa-chevron-left"></i>
-						</button>
-						<span className='currentPic'>
-							{currentPic + 1} / {pictures.length}
-						</span>
-						<button className='btn btn-next' onClick={moveToNext}>
-							<i className="fa-solid fa-chevron-right"></i>
-						</button>
-					</>
-				)}
-			</div>
-  )
+	<div className='apartement-banner'>
+		<div className='image-container'>{getCarouselOrDefaultImage()}</div>
+			{ arePicturesAvailable() && (
+				<>
+					<button className='btn btn-previous' onClick={moveToPrevious}>
+						<i className="fa-solid fa-chevron-left"></i>
+					</button>
+					<span className='currentPic'>
+						{currentPic + 1} / {pictures.length}
+					</span>
+					<button className='btn btn-next' onClick={moveToNext}>
+						<i className="fa-solid fa-chevron-right"></i>
+					</button>
+				</>
+			)}
+		</div>
+  	)
 }
 

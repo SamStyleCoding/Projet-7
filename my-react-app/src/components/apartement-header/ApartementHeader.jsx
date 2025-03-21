@@ -7,7 +7,7 @@ export function ApartementHeader({data}) {
 	const [firstName, lastName] = name.split(" ");
 
   return (
-	  <div className='apartement-page__header'>
+	    <div className='apartement-page__header'>
 			<div className='apartement-title'>
 				<h1>{data.title}</h1>
 				<h2>{data.location}</h2>
@@ -34,5 +34,5 @@ export function ApartementHeader({data}) {
 				</div>
 			</div>
 		</div>
-  )
+  	)
 }

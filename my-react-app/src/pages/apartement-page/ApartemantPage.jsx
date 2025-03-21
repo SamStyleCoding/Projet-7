@@ -4,6 +4,7 @@ import { ApartementDescription } from '../../components/Apartement-description/A
 import { ApartementBanner } from '../../components/apartement-banner/ApartementBanner'
 import { ApartementHeader } from '../../components/apartement-header/ApartementHeader';
 import { useParams } from 'react-router-dom';
+import ErrorPageNotFound from "../error/ErrorPageNotFound.jsx";
 
 
 export default function ApartemantPage() {
@@ -13,9 +14,6 @@ export default function ApartemantPage() {
 	const [selectFlat, setSelectFlat] = useState(null);
 
 	useEffect(() => {
-		fetchApartementData();
-	}, [id]);
-	
 		function fetchApartementData() {
 			fetch('/db.json')
 				.then((res) => res.json())
@@ -25,9 +23,11 @@ export default function ApartemantPage() {
 				})
 				.catch(console.error)
 		}
-
-		if(selectFlat === null) {
-			return <div>Loading...</div>
+		fetchApartementData();
+	}, [id]);
+	
+		if(!selectFlat) {
+			return <ErrorPageNotFound />
 		}
 
   return (
