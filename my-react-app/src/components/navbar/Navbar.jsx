@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from "react-router-dom"
 import './Navbar.scss'
 
-export default function Navbar() {
+export const Navbar = () => {
   return (
 	<nav className="navbar">
 		<NavLink to="/" className="navbar-logo">

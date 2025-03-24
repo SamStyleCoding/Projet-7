@@ -1,9 +1,0 @@
-.main {
-  padding: 2rem 3rem;
-  min-height: 60vh;
-}
-@media screen and (width <= 768px) {
-  .main {
-    padding: 1rem;
-  }
-}/*# sourceMappingURL=Main.css.map */
